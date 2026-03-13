@@ -48,13 +48,7 @@ const smeNav: NavSection[] = [
       { href: "/sme/create-mission", icon: "add_circle", label: "Create Mission" },
     ],
   },
-  {
-    title: "Candidates",
-    items: [
-      { href: "/sme/matching", icon: "hub", label: "AI Matching" },
-      { href: "/sme/comparison", icon: "compare_arrows", label: "Compare" },
-    ],
-  },
+
 ];
 
 const talentNav: NavSection[] = [

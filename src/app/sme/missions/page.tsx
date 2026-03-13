@@ -1,12 +1,15 @@
+"use client";
+import { useState } from "react";
 import Sidebar from "@/components/Sidebar";
 import Topbar from "@/components/Topbar";
 import Link from "next/link";
+import SubscriptionModal from "@/components/SubscriptionModal";
 
 const missions = [
-  { id: "MB-124", title: "Mission 1", company: "TechNova", status: "Open", deadline: "Mar 28, 2025", candidates: 12, score: 94 },
-  { id: "MB-123", title: "Mission 2", company: "FinEase", status: "Matching", deadline: "Apr 5, 2025", candidates: 7, score: 87 },
-  { id: "MB-121", title: "Mission 3", company: "DesignCo", status: "Open", deadline: "Apr 12, 2025", candidates: 9, score: 76 },
-  { id: "MB-118", title: "Mission 4", company: "PayCore", status: "Open", deadline: "Apr 20, 2025", candidates: 3, score: 0 },
+  { id: "MB-124", title: "Lead Data Architect", status: "Open", deadline: "Mar 28, 2025", candidates: 12, score: 94 },
+  { id: "MB-123", title: "React Frontend Developer", status: "Matching", deadline: "Apr 5, 2025", candidates: 7, score: 87 },
+  { id: "MB-121", title: "UX Researcher", status: "Open", deadline: "Apr 12, 2025", candidates: 9, score: 76 },
+  { id: "MB-118", title: "Backend API Engineer", status: "Open", deadline: "Apr 20, 2025", candidates: 3, score: 0 },
 ];
 
 const statusBadge: Record<string, string> = {
@@ -16,6 +19,8 @@ const statusBadge: Record<string, string> = {
 };
 
 export default function SmeMissions() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <div className="flex min-h-screen">
       <Sidebar role="sme" />
@@ -24,10 +29,10 @@ export default function SmeMissions() {
           title="My Missions"
           subtitle="TechNova Inc. mission portfolio"
           actions={
-            <Link href="/sme/create-mission" className="btn-primary">
+            <button onClick={() => setIsModalOpen(true)} className="btn-primary">
               <span className="material-symbols-rounded text-[17px]">add</span>
               Create Mission
-            </Link>
+            </button>
           }
         />
         <div className="page">
@@ -74,6 +79,8 @@ export default function SmeMissions() {
           </div>
         </div>
       </div>
+      
+      <SubscriptionModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </div>
   );
 }
