@@ -6,10 +6,10 @@ import Link from "next/link";
 import SubscriptionModal from "@/components/SubscriptionModal";
 
 const missions = [
-  { id: "MB-124", title: "Lead Data Architect", status: "Open", deadline: "Mar 28, 2025", candidates: 12, score: 94 },
-  { id: "MB-123", title: "React Frontend Developer", status: "Matching", deadline: "Apr 5, 2025", candidates: 7, score: 87 },
-  { id: "MB-121", title: "UX Researcher", status: "Open", deadline: "Apr 12, 2025", candidates: 9, score: 76 },
-  { id: "MB-118", title: "Backend API Engineer", status: "Open", deadline: "Apr 20, 2025", candidates: 3, score: 0 },
+  { id: "MB-124", title: "Mission 1", status: "Open", deadline: "Mar 28, 2025", candidates: 12, score: 94 },
+  { id: "MB-123", title: "Mission 2", status: "Matching", deadline: "Apr 5, 2025", candidates: 7, score: 87 },
+  { id: "MB-121", title: "Mission 3", status: "Open", deadline: "Apr 12, 2025", candidates: 9, score: 76 },
+  { id: "MB-118", title: "Mission 4", status: "Open", deadline: "Apr 20, 2025", candidates: 3, score: 0 },
 ];
 
 const statusBadge: Record<string, string> = {
