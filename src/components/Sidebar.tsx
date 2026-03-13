@@ -27,6 +27,7 @@ const adminNav: NavSection[] = [
     items: [
       { href: "/admin/matching", icon: "hub", label: "AI Matching" },
       { href: "/admin/comparison", icon: "compare_arrows", label: "Comparison View" },
+      { href: "/admin/teams", icon: "groups", label: "Teams" },
       { href: "/admin/missions", icon: "rocket_launch", label: "Missions" },
       { href: "/admin/talents", icon: "group", label: "Talents" },
     ],
